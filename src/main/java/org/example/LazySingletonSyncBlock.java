@@ -10,7 +10,7 @@ public class LazySingletonSyncBlock {
     public  static LazySingletonSyncBlock getInstance(){
         //Double check , so no two threads when accessed at same time, will not create the different instance
         if(instance == null){
-            synchronized (LazySingleton.class){
+            synchronized (LazySingletonSyncBlock.class){
                 if(instance == null) {
                     instance = new LazySingletonSyncBlock();
                 }
